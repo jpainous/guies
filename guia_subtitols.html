@@ -156,7 +156,14 @@
     text-align:center;
     color:var(--suau);
     font-size:.88rem;
-    padding:1rem;
+    padding:1.2rem 1rem 2rem;
+    line-height:1.7;
+  }
+  footer .deepseek{
+    display:block;
+    margin-top:.4rem;
+    font-size:.82rem;
+    color:#8a929a;
   }
   .idioma{display:none;}
   .idioma.actiu{display:block;}
@@ -741,6 +748,7 @@ winget install Gyan.FFmpeg
 
 <footer>
   <span id="peu">Guia compartible · Elaborada a partir d'un procés real de preparació de material docent</span>
+  <span class="deepseek" id="deepseek">Aquesta guia s'ha creat amb l'ajuda de DeepSeek per generar el contingut, corregir les traduccions i donar forma al procés.</span>
 </footer>
 
 <script>
@@ -748,17 +756,20 @@ winget install Gyan.FFmpeg
     ca: {
       titol: "Guia: subtítols traduïts per a vídeos web",
       subtitol: "Guia pràctica per a ús docent o personal · Windows 11",
-      peu: "Guia compartible · Elaborada a partir d'un procés real de preparació de material docent"
+      peu: "Guia compartible · Elaborada a partir d'un procés real de preparació de material docent",
+      deepseek: "Aquesta guia s'ha creat amb l'ajuda de DeepSeek per generar el contingut, corregir les traduccions i donar forma al procés."
     },
     es: {
       titol: "Guía: subtítulos traducidos para vídeos web",
       subtitol: "Guía práctica para uso docente o personal · Windows 11",
-      peu: "Guía compartible · Elaborada a partir de un proceso real de preparación de material docente"
+      peu: "Guía compartible · Elaborada a partir de un proceso real de preparación de material docente",
+      deepseek: "Esta guía se ha creado con la ayuda de DeepSeek para generar el contenido, corregir las traducciones y dar forma al proceso."
     },
     en: {
       titol: "Guide: translated subtitles for web videos",
       subtitol: "Practical guide for teaching or personal use · Windows 11",
-      peu: "Shareable guide · Based on a real process of preparing teaching materials"
+      peu: "Shareable guide · Based on a real process of preparing teaching materials",
+      deepseek: "This guide was created with the help of DeepSeek to generate the content, correct the translations and shape the process."
     }
   };
 
@@ -772,6 +783,7 @@ winget install Gyan.FFmpeg
     document.getElementById('titol').textContent = textos[idioma].titol;
     document.getElementById('subtitol').textContent = textos[idioma].subtitol;
     document.getElementById('peu').textContent = textos[idioma].peu;
+    document.getElementById('deepseek').textContent = textos[idioma].deepseek;
     document.documentElement.lang = idioma;
   }
 
