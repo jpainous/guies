@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia: subtítols traduïts per a vídeos web / Guía / Guide</title>
+<style>
+  :root{
+    --fons:#f7f5f0;
+    --targeta:#ffffff;
+    --text:#1f2328;
+    --suau:#5b636b;
+    --accent:#b5482a;
+    --accent-clar:#f3e3dd;
+    --borda:#e3ded5;
+    --codi-fons:#282c34;
+    --codi-text:#e6e6e6;
+    --nota:#eef4fb;
+    --nota-borda:#4a7fb5;
+    --avis:#fdf6e3;
+    --avis-borda:#c9971a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--fons);
+    color:var(--text);
+    line-height:1.65;
+    font-size:17px;
+  }
+  header{
+    background:linear-gradient(135deg,#2d3a4a,#4a5d73);
+    color:#fff;
+    padding:3rem 1.5rem 2rem;
+    text-align:center;
+  }
+  header h1{margin:0 0 .5rem;font-size:2rem;line-height:1.25;}
+  header p{margin:0;opacity:.9;font-size:1.05rem;}
+  .selector{
+    margin-top:1.5rem;
+    display:flex;
+    justify-content:center;
+    gap:.5rem;
+    flex-wrap:wrap;
+  }
+  .selector button{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.4);
+    padding:.5rem 1.1rem;
+    border-radius:20px;
+    font-size:.95rem;
+    cursor:pointer;
+    transition:all .15s;
+  }
+  .selector button:hover{background:rgba(255,255,255,.28);}
+  .selector button.actiu{
+    background:#fff;
+    color:#2d3a4a;
+    font-weight:600;
+    border-color:#fff;
+  }
+  main{
+    max-width:820px;
+    margin:0 auto;
+    padding:2rem 1.5rem 4rem;
+  }
+  section{
+    background:var(--targeta);
+    border:1px solid var(--borda);
+    border-radius:12px;
+    padding:1.5rem 1.75rem;
+    margin-bottom:1.5rem;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  h2{
+    margin-top:0;
+    font-size:1.35rem;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+  }
+  h2 .num{
+    background:var(--accent);
+    color:#fff;
+    width:1.8rem;height:1.8rem;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;justify-content:center;
+    font-size:.95rem;
+    flex:none;
+  }
+  h3{font-size:1.08rem;margin:1.4rem 0 .5rem;}
+  p{margin:.6rem 0;}
+  ul,ol{margin:.6rem 0;padding-left:1.4rem;}
+  li{margin:.35rem 0;}
+  code{
+    background:#efece6;
+    padding:.12rem .4rem;
+    border-radius:4px;
+    font-size:.9em;
+    font-family:"SF Mono",Consolas,"Courier New",monospace;
+  }
+  pre{
+    background:var(--codi-fons);
+    color:var(--codi-text);
+    padding:1rem 1.2rem;
+    border-radius:8px;
+    overflow-x:auto;
+    font-size:.88rem;
+    line-height:1.55;
+  }
+  pre code{background:none;color:inherit;padding:0;}
+  .nota{
+    background:var(--nota);
+    border-left:4px solid var(--nota-borda);
+    padding:.8rem 1rem;
+    border-radius:0 6px 6px 0;
+    margin:1rem 0;
+    font-size:.95rem;
+  }
+  .avis{
+    background:var(--avis);
+    border-left:4px solid var(--avis-borda);
+    padding:.8rem 1rem;
+    border-radius:0 6px 6px 0;
+    margin:1rem 0;
+    font-size:.95rem;
+  }
+  .nota strong,.avis strong{display:block;margin-bottom:.2rem;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:1rem 0;
+    font-size:.93rem;
+  }
+  th,td{
+    text-align:left;
+    padding:.55rem .7rem;
+    border-bottom:1px solid var(--borda);
+    vertical-align:top;
+  }
+  th{background:#f0ece5;font-weight:600;}
+  .index{
+    background:#f0ece5;
+    border-radius:8px;
+    padding:1rem 1.4rem;
+    margin-bottom:1.5rem;
+  }
+  .index ol{margin:.3rem 0;}
+  .index a{color:var(--accent);text-decoration:none;}
+  .index a:hover{text-decoration:underline;}
+  footer{
+    text-align:center;
+    color:var(--suau);
+    font-size:.88rem;
+    padding:1rem;
+  }
+  .idioma{display:none;}
+  .idioma.actiu{display:block;}
+  @media (max-width:600px){
+    header{padding:2rem 1rem 1.5rem;}
+    header h1{font-size:1.5rem;}
+    main{padding:1.2rem .8rem 3rem;}
+    section{padding:1.2rem 1rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="titol">Guia: subtítols traduïts per a vídeos web</h1>
+  <p id="subtitol">Guia pràctica per a ús docent o personal · Windows 11</p>
+  <div class="selector">
+    <button data-idioma="ca" class="actiu">Català</button>
+    <button data-idioma="es">Castellano</button>
+    <button data-idioma="en">English</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= CATALÀ ================= -->
+  <div class="idioma actiu" id="ca">
+
+    <div class="index">
+      <strong>Contingut</strong>
+      <ol>
+        <li><a href="#ca-panorama">Panorama del procés</a></li>
+        <li><a href="#ca-requisits">Què necessites</a></li>
+        <li><a href="#ca-subtitols">Descarregar els subtítols originals</a></li>
+        <li><a href="#ca-ffmpeg">Instal·lar FFmpeg (conversió a .srt)</a></li>
+        <li><a href="#ca-traduir">Traduir els subtítols</a></li>
+        <li><a href="#ca-revisar">Revisar la traducció</a></li>
+        <li><a href="#ca-projectar">Projectar el vídeo amb subtítols</a></li>
+        <li><a href="#ca-drets">Drets d'autor i ús educatiu</a></li>
+        <li><a href="#ca-resum">Resum ràpid</a></li>
+      </ol>
+    </div>
+
+    <section id="ca-panorama">
+      <h2><span class="num">1</span>Panorama del procés</h2>
+      <p>La idea és senzilla: <strong>no descarreguem el vídeo</strong>, només n'extraiem el fitxer de subtítols, el traduïm al català o al castellà, el revisem i el sobreposem al reproductor del navegador quan projectem el vídeo.</p>
+      <ol>
+        <li>Comprovar quins subtítols ofereix la pàgina del vídeo.</li>
+        <li>Descarregar el fitxer de subtítols en l'idioma original.</li>
+        <li>Convertir-lo al format <code>.srt</code> (el més compatible).</li>
+        <li>Traduir-lo a l'idioma de destí.</li>
+        <li>Revisar els errors més evidents.</li>
+        <li>Carregar-lo sobre el reproductor web amb una extensió del navegador.</li>
+      </ol>
+      <div class="nota">
+        <strong>Per què no descarregar el vídeo?</strong>
+        Perquè el vídeo continua reproduint-se des de la pàgina original (respectant les condicions del lloc), i nosaltres només hi afegim una capa de text al damunt. És més lleuger, més legal i més senzill.
+      </div>
+    </section>
+
+    <section id="ca-requisits">
+      <h2><span class="num">2</span>Què necessites</h2>
+      <ul>
+        <li><strong>Windows 11</strong> (o qualsevol sistema amb terminal).</li>
+        <li><strong>yt-dlp</strong>: eina de línia de comandes per extreure subtítols.</li>
+        <li><strong>FFmpeg</strong>: per convertir els subtítols a <code>.srt</code>.</li>
+        <li><strong>Un navegador</strong> (Chrome, Edge, Firefox) amb una extensió de subtítols superposats.</li>
+        <li><strong>Un traductor</strong> de fitxers de subtítols (en línia o manual).</li>
+      </ul>
+    </section>
+
+    <section id="ca-subtitols">
+      <h2><span class="num">3</span>Descarregar els subtítols originals</h2>
+
+      <h3>3.1 Instal·lar yt-dlp</h3>
+      <p>L'opció més còmoda a Windows 11 és fer servir <code>winget</code>, que ho instal·la tot a la ubicació correcta:</p>
+      <pre><code>winget install yt-dlp</code></pre>
+      <p>Si prefereixes no instal·lar res, descarrega <code>yt-dlp.exe</code> des de la pàgina de versions de GitHub i desa'l en una carpeta coneguda (per exemple, <code>Downloads</code>).</p>
+
+      <h3>3.2 Veure quins subtítols hi ha</h3>
+      <p>Substitueix l'enllaç pel del vídeo que t'interessa:</p>
+      <pre><code>yt-dlp --list-subs "ENLLAÇ_DEL_VIDEO"</code></pre>
+      <p>Obtindràs una llista com aquesta:</p>
+      <pre><code>Language  Formats
+fr-forced vtt
+de-acc    vtt</code></pre>
+      <div class="nota">
+        <strong>Consell</strong>
+        Les etiquetes poden ser <code>fr</code>, <code>fr-forced</code>, <code>de-acc</code>, etc. Si una etiqueta porta sufix (<code>-forced</code>, <code>-acc</code>), has d'escriure-la sencera o fer servir un comodí (<code>"fr.*"</code>).
+      </div>
+
+      <h3>3.3 Descarregar el subtítol triat</h3>
+      <p>Canvia <code>fr-forced</code> per l'etiqueta que hagis triat:</p>
+      <pre><code>yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "ENLLAÇ_DEL_VIDEO"</code></pre>
+      <table>
+        <tr><th>Opció</th><th>Què fa</th></tr>
+        <tr><td><code>--write-subs</code></td><td>Descarrega els subtítols</td></tr>
+        <tr><td><code>--sub-langs "xx"</code></td><td>Tria l'idioma (pot ser un comodí: <code>"fr.*"</code>)</td></tr>
+        <tr><td><code>--convert-subs srt</code></td><td>Converteix al format <code>.srt</code></td></tr>
+        <tr><td><code>--skip-download</code></td><td>No descarrega el vídeo, només els subtítols</td></tr>
+      </table>
+      <div class="avis">
+        <strong>Compte amb els subtítols "forçats"</strong>
+        Un subtítol <code>-forced</code> de vegades només conté les parts traduïdes (per exemple, quan algú parla en una altra llengua) i no tot el diàleg. Si el fitxer resultant té poques línies, prova una altra etiqueta (per exemple, <code>de-acc</code>, que sol ser complet).
+      </div>
+    </section>
+
+    <section id="ca-ffmpeg">
+      <h2><span class="num">4</span>Instal·lar FFmpeg (conversió a .srt)</h2>
+      <p>Si en executar l'ordre anterior veus un error com <code>ffmpeg not found</code>, vol dir que falta aquesta eina. Instal·la-la amb:</p>
+      <pre><code>winget install Gyan.FFmpeg</code></pre>
+      <p>Després, <strong>tanca i torna a obrir el terminal</strong> perquè es recarreguin les variables d'entorn. Comprova-ho amb:</p>
+      <pre><code>ffmpeg -version</code></pre>
+      <p>Si apareix la informació de la versió, ja pots tornar a executar l'ordre de descàrrega del punt 3.3.</p>
+      <div class="nota">
+        <strong>Alternativa sense FFmpeg</strong>
+        El fitxer <code>.vtt</code> que es descarrega abans de la conversió també conté el text. El pots obrir amb un editor de text, però el <code>.srt</code> és més universal per traduir i carregar després.
+      </div>
+    </section>
+
+    <section id="ca-traduir">
+      <h2><span class="num">5</span>Traduir els subtítols</h2>
+      <p>Ja tens un fitxer <code>.srt</code> en l'idioma original. Ara cal traduir-lo.</p>
+
+      <h3>Opció A: Eina en línia (la més ràpida)</h3>
+      <ol>
+        <li>Ves a un servei de traducció de subtítols (per exemple, TranslateSubtitles.co o similar).</li>
+        <li>Puja el fitxer <code>.srt</code>.</li>
+        <li>Tria l'idioma d'origen i el de destinació (català o castellà).</li>
+        <li>Descarrega el fitxer traduït.</li>
+      </ol>
+
+      <h3>Opció B: Traducció manual assistida</h3>
+      <p>Obre el <code>.srt</code> amb un editor de text i tradueix-lo línia per línia, ajudant-te d'un traductor com DeepL. És més lent, però dona més control sobre el resultat.</p>
+
+      <div class="nota">
+        <strong>Consell de qualitat</strong>
+        Com més properes siguin les llengües d'origen i destí (per exemple, francès → castellà), més fiable sol ser la traducció automàtica. De l'alemany al castellà també funciona bé, però convé revisar més.
+      </div>
+    </section>
+
+    <section id="ca-revisar">
+      <h2><span class="num">6</span>Revisar la traducció</h2>
+      <p>La traducció automàtica és un bon punt de partida, però abans de projectar-la convé fer una revisió ràpida. Fixa't especialment en:</p>
+      <ul>
+        <li><strong>Noms propis i títols</strong> d'obres, jocs, persones o llocs (no s'han de traduir).</li>
+        <li><strong>Termes tècnics o culturals</strong> que el traductor pot haver interpretat malament.</li>
+        <li><strong>Concordança de gènere i nombre</strong> (per exemple, "autora" quan l'original és un home).</li>
+        <li><strong>Frases trencades</strong> o construccions estranyes que dificultin la comprensió.</li>
+        <li><strong>Sincronització</strong>: comprova que les marques de temps arriben fins al final del vídeo.</li>
+      </ul>
+      <div class="avis">
+        <strong>Revisa la cobertura</strong>
+        Obre el fitxer i mira quantes línies té i fins a quin minut arriba. Un vídeo de 30 minuts amb subtítol complet sol tenir centenars de línies. Si en té molt poques, potser has agafat un subtítol parcial.
+      </div>
+    </section>
+
+    <section id="ca-projectar">
+      <h2><span class="num">7</span>Projectar el vídeo amb subtítols</h2>
+      <p>Aquesta és la part que fa que no calgui descarregar el vídeo: sobreposem el nostre <code>.srt</code> al reproductor web.</p>
+
+      <h3>Amb una extensió del navegador</h3>
+      <ol>
+        <li>Instal·la una extensió de subtítols superposats (per exemple, <em>Subtitle Overlay</em> o similar) des de la botiga del teu navegador.</li>
+        <li>Obre la pàgina del vídeo original.</li>
+        <li>Fes clic a la icona de l'extensió i tria <strong>Carregar fitxer</strong>.</li>
+        <li>Selecciona el teu <code>.srt</code> traduït.</li>
+        <li>Si cal, ajusta el desplaçament temporal (+1 s, −0,5 s…) fins que els subtítols quadrin amb la veu.</li>
+      </ol>
+
+      <div class="nota">
+        <strong>Per què no injectar codi a la pàgina?</strong>
+        Els reproductors web moderns solen estar tancats (HLS, proteccions, etc.) i no permeten afegir una etiqueta <code>&lt;track&gt;</code> manualment. Les extensions de subtítols superposats funcionen precisament perquè dibuixen el text per sobre, sense tocar el reproductor.
+      </div>
+    </section>
+
+    <section id="ca-drets">
+      <h2><span class="num">8</span>Drets d'autor i ús educatiu</h2>
+      <p>A l'Estat espanyol (inclosa Catalunya), la legislació de propietat intel·lectual permet utilitzar <strong>fragments</strong> d'obres per il·lustrar l'activitat docent en ensenyament reglat, sempre que es compleixin aquestes condicions:</p>
+      <ul>
+        <li>Que sigui amb <strong>finalitat docent</strong>, no comercial.</li>
+        <li>Que es tracti d'un <strong>fragment</strong> (la part necessària), no de l'obra sencera.</li>
+        <li>Que l'obra ja estigui <strong>publicada</strong>.</li>
+        <li>Que es <strong>citi l'autor i la font</strong> (per exemple, el nom del programa i l'enllaç original).</li>
+      </ul>
+      <div class="avis">
+        <strong>Recomanació pràctica</strong>
+        Per a ús presencial a l'aula, projectar el vídeo original amb els teus subtítols i citar la font és la via més segura. Si vols penjar el fragment a la plataforma del centre, valora-ho amb el centre: el més garantista és enllaçar el vídeo original en lloc de penjar-lo.
+      </div>
+    </section>
+
+    <section id="ca-resum">
+      <h2><span class="num">9</span>Resum ràpid</h2>
+      <pre><code># 1. Veure subtítols disponibles
+yt-dlp --list-subs "ENLLAÇ"
+
+# 2. Descarregar-ne un (exemple: fr-forced)
+yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "ENLLAÇ"
+
+# 3. Si falta FFmpeg
+winget install Gyan.FFmpeg
+
+# 4. Traduir el .srt amb una eina en línia o manualment
+
+# 5. Carregar el .srt traduït sobre el reproductor web amb una extensió de subtítols superposats</code></pre>
+      <p>Amb aquests cinc passos ja pots projectar qualsevol vídeo web amb subtítols en l'idioma que necessitis, sense descarregar-lo.</p>
+    </section>
+
+  </div>
+
+  <!-- ================= CASTELLANO ================= -->
+  <div class="idioma" id="es">
+
+    <div class="index">
+      <strong>Contenido</strong>
+      <ol>
+        <li><a href="#es-panorama">Panorama del proceso</a></li>
+        <li><a href="#es-requisits">Qué necesitas</a></li>
+        <li><a href="#es-subtitols">Descargar los subtítulos originales</a></li>
+        <li><a href="#es-ffmpeg">Instalar FFmpeg (conversión a .srt)</a></li>
+        <li><a href="#es-traduir">Traducir los subtítulos</a></li>
+        <li><a href="#es-revisar">Revisar la traducción</a></li>
+        <li><a href="#es-projectar">Proyectar el vídeo con subtítulos</a></li>
+        <li><a href="#es-drets">Derechos de autor y uso educativo</a></li>
+        <li><a href="#es-resum">Resumen rápido</a></li>
+      </ol>
+    </div>
+
+    <section id="es-panorama">
+      <h2><span class="num">1</span>Panorama del proceso</h2>
+      <p>La idea es sencilla: <strong>no descargamos el vídeo</strong>, solo extraemos el archivo de subtítulos, lo traducimos al catalán o al castellano, lo revisamos y lo superponemos al reproductor del navegador cuando proyectamos el vídeo.</p>
+      <ol>
+        <li>Comprobar qué subtítulos ofrece la página del vídeo.</li>
+        <li>Descargar el archivo de subtítulos en el idioma original.</li>
+        <li>Convertirlo al formato <code>.srt</code> (el más compatible).</li>
+        <li>Traducirlo al idioma de destino.</li>
+        <li>Revisar los errores más evidentes.</li>
+        <li>Cargarlo sobre el reproductor web con una extensión del navegador.</li>
+      </ol>
+      <div class="nota">
+        <strong>¿Por qué no descargar el vídeo?</strong>
+        Porque el vídeo sigue reproduciéndose desde la página original (respetando las condiciones del sitio), y nosotros solo añadimos una capa de texto encima. Es más ligero, más legal y más sencillo.
+      </div>
+    </section>
+
+    <section id="es-requisits">
+      <h2><span class="num">2</span>Qué necesitas</h2>
+      <ul>
+        <li><strong>Windows 11</strong> (o cualquier sistema con terminal).</li>
+        <li><strong>yt-dlp</strong>: herramienta de línea de comandos para extraer subtítulos.</li>
+        <li><strong>FFmpeg</strong>: para convertir los subtítulos a <code>.srt</code>.</li>
+        <li><strong>Un navegador</strong> (Chrome, Edge, Firefox) con una extensión de subtítulos superpuestos.</li>
+        <li><strong>Un traductor</strong> de archivos de subtítulos (en línea o manual).</li>
+      </ul>
+    </section>
+
+    <section id="es-subtitols">
+      <h2><span class="num">3</span>Descargar los subtítulos originales</h2>
+
+      <h3>3.1 Instalar yt-dlp</h3>
+      <p>La opción más cómoda en Windows 11 es usar <code>winget</code>, que lo instala todo en la ubicación correcta:</p>
+      <pre><code>winget install yt-dlp</code></pre>
+      <p>Si prefieres no instalar nada, descarga <code>yt-dlp.exe</code> desde la página de versiones de GitHub y guárdalo en una carpeta conocida (por ejemplo, <code>Downloads</code>).</p>
+
+      <h3>3.2 Ver qué subtítulos hay</h3>
+      <p>Sustituye el enlace por el del vídeo que te interesa:</p>
+      <pre><code>yt-dlp --list-subs "ENLACE_DEL_VIDEO"</code></pre>
+      <p>Obtendrás una lista como esta:</p>
+      <pre><code>Language  Formats
+fr-forced vtt
+de-acc    vtt</code></pre>
+      <div class="nota">
+        <strong>Consejo</strong>
+        Las etiquetas pueden ser <code>fr</code>, <code>fr-forced</code>, <code>de-acc</code>, etc. Si una etiqueta lleva sufijo (<code>-forced</code>, <code>-acc</code>), debes escribirla entera o usar un comodín (<code>"fr.*"</code>).
+      </div>
+
+      <h3>3.3 Descargar el subtítulo elegido</h3>
+      <p>Cambia <code>fr-forced</code> por la etiqueta que hayas elegido:</p>
+      <pre><code>yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "ENLACE_DEL_VIDEO"</code></pre>
+      <table>
+        <tr><th>Opción</th><th>Qué hace</th></tr>
+        <tr><td><code>--write-subs</code></td><td>Descarga los subtítulos</td></tr>
+        <tr><td><code>--sub-langs "xx"</code></td><td>Elige el idioma (puede ser un comodín: <code>"fr.*"</code>)</td></tr>
+        <tr><td><code>--convert-subs srt</code></td><td>Convierte al formato <code>.srt</code></td></tr>
+        <tr><td><code>--skip-download</code></td><td>No descarga el vídeo, solo los subtítulos</td></tr>
+      </table>
+      <div class="avis">
+        <strong>Cuidado con los subtítulos "forzados"</strong>
+        Un subtítulo <code>-forced</code> a veces solo contiene las partes traducidas (por ejemplo, cuando alguien habla en otro idioma) y no todo el diálogo. Si el archivo resultante tiene pocas líneas, prueba otra etiqueta (por ejemplo, <code>de-acc</code>, que suele ser completo).
+      </div>
+    </section>
+
+    <section id="es-ffmpeg">
+      <h2><span class="num">4</span>Instalar FFmpeg (conversión a .srt)</h2>
+      <p>Si al ejecutar la orden anterior ves un error como <code>ffmpeg not found</code>, significa que falta esta herramienta. Instálala con:</p>
+      <pre><code>winget install Gyan.FFmpeg</code></pre>
+      <p>Después, <strong>cierra y vuelve a abrir el terminal</strong> para que se recarguen las variables de entorno. Compruébalo con:</p>
+      <pre><code>ffmpeg -version</code></pre>
+      <p>Si aparece la información de la versión, ya puedes volver a ejecutar la orden de descarga del punto 3.3.</p>
+      <div class="nota">
+        <strong>Alternativa sin FFmpeg</strong>
+        El archivo <code>.vtt</code> que se descarga antes de la conversión también contiene el texto. Puedes abrirlo con un editor de texto, pero el <code>.srt</code> es más universal para traducir y cargar después.
+      </div>
+    </section>
+
+    <section id="es-traduir">
+      <h2><span class="num">5</span>Traducir los subtítulos</h2>
+      <p>Ya tienes un archivo <code>.srt</code> en el idioma original. Ahora hay que traducirlo.</p>
+
+      <h3>Opción A: Herramienta en línea (la más rápida)</h3>
+      <ol>
+        <li>Ve a un servicio de traducción de subtítulos (por ejemplo, TranslateSubtitles.co o similar).</li>
+        <li>Sube el archivo <code>.srt</code>.</li>
+        <li>Elige el idioma de origen y el de destino (catalán o castellano).</li>
+        <li>Descarga el archivo traducido.</li>
+      </ol>
+
+      <h3>Opción B: Traducción manual asistida</h3>
+      <p>Abre el <code>.srt</code> con un editor de texto y tradúcelo línea por línea, ayudándote de un traductor como DeepL. Es más lento, pero da más control sobre el resultado.</p>
+
+      <div class="nota">
+        <strong>Consejo de calidad</strong>
+        Cuanto más cercanas sean las lenguas de origen y destino (por ejemplo, francés → castellano), más fiable suele ser la traducción automática. Del alemán al castellano también funciona bien, pero conviene revisar más.
+      </div>
+    </section>
+
+    <section id="es-revisar">
+      <h2><span class="num">6</span>Revisar la traducción</h2>
+      <p>La traducción automática es un buen punto de partida, pero antes de proyectarla conviene hacer una revisión rápida. Fíjate especialmente en:</p>
+      <ul>
+        <li><strong>Nombres propios y títulos</strong> de obras, juegos, personas o lugares (no deben traducirse).</li>
+        <li><strong>Términos técnicos o culturales</strong> que el traductor puede haber interpretado mal.</li>
+        <li><strong>Concordancia de género y número</strong> (por ejemplo, "autora" cuando el original es un hombre).</li>
+        <li><strong>Frases cortadas</strong> o construcciones extrañas que dificulten la comprensión.</li>
+        <li><strong>Sincronización</strong>: comprueba que las marcas de tiempo llegan hasta el final del vídeo.</li>
+      </ul>
+      <div class="avis">
+        <strong>Revisa la cobertura</strong>
+        Abre el archivo y mira cuántas líneas tiene y hasta qué minuto llega. Un vídeo de 30 minutos con subtítulo completo suele tener cientos de líneas. Si tiene muy pocas, quizá hayas cogido un subtítulo parcial.
+      </div>
+    </section>
+
+    <section id="es-projectar">
+      <h2><span class="num">7</span>Proyectar el vídeo con subtítulos</h2>
+      <p>Esta es la parte que hace que no sea necesario descargar el vídeo: superponemos nuestro <code>.srt</code> al reproductor web.</p>
+
+      <h3>Con una extensión del navegador</h3>
+      <ol>
+        <li>Instala una extensión de subtítulos superpuestos (por ejemplo, <em>Subtitle Overlay</em> o similar) desde la tienda de tu navegador.</li>
+        <li>Abre la página del vídeo original.</li>
+        <li>Haz clic en el icono de la extensión y elige <strong>Cargar archivo</strong>.</li>
+        <li>Selecciona tu <code>.srt</code> traducido.</li>
+        <li>Si hace falta, ajusta el desplazamiento temporal (+1 s, −0,5 s…) hasta que los subtítulos cuadren con la voz.</li>
+      </ol>
+
+      <div class="nota">
+        <strong>¿Por qué no inyectar código en la página?</strong>
+        Los reproductores web modernos suelen estar cerrados (HLS, protecciones, etc.) y no permiten añadir una etiqueta <code>&lt;track&gt;</code> manualmente. Las extensiones de subtítulos superpuestos funcionan precisamente porque dibujan el texto por encima, sin tocar el reproductor.
+      </div>
+    </section>
+
+    <section id="es-drets">
+      <h2><span class="num">8</span>Derechos de autor y uso educativo</h2>
+      <p>En el Estado español (incluida Cataluña), la legislación de propiedad intelectual permite utilizar <strong>fragmentos</strong> de obras para ilustrar la actividad docente en enseñanza reglada, siempre que se cumplan estas condiciones:</p>
+      <ul>
+        <li>Que sea con <strong>finalidad docente</strong>, no comercial.</li>
+        <li>Que se trate de un <strong>fragmento</strong> (la parte necesaria), no de la obra entera.</li>
+        <li>Que la obra ya esté <strong>publicada</strong>.</li>
+        <li>Que se <strong>cite al autor y la fuente</strong> (por ejemplo, el nombre del programa y el enlace original).</li>
+      </ul>
+      <div class="avis">
+        <strong>Recomendación práctica</strong>
+        Para uso presencial en el aula, proyectar el vídeo original con tus subtítulos y citar la fuente es la vía más segura. Si quieres colgar el fragmento en la plataforma del centro, valóralo con el centro: lo más garantista es enlazar el vídeo original en lugar de colgarlo.
+      </div>
+    </section>
+
+    <section id="es-resum">
+      <h2><span class="num">9</span>Resumen rápido</h2>
+      <pre><code># 1. Ver subtítulos disponibles
+yt-dlp --list-subs "ENLACE"
+
+# 2. Descargar uno (ejemplo: fr-forced)
+yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "ENLACE"
+
+# 3. Si falta FFmpeg
+winget install Gyan.FFmpeg
+
+# 4. Traducir el .srt con una herramienta en línea o manualmente
+
+# 5. Cargar el .srt traducido sobre el reproductor web con una extensión de subtítulos superpuestos</code></pre>
+      <p>Con estos cinco pasos ya puedes proyectar cualquier vídeo web con subtítulos en el idioma que necesites, sin descargarlo.</p>
+    </section>
+
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div class="idioma" id="en">
+
+    <div class="index">
+      <strong>Contents</strong>
+      <ol>
+        <li><a href="#en-panorama">Process overview</a></li>
+        <li><a href="#en-requisits">What you need</a></li>
+        <li><a href="#en-subtitols">Download the original subtitles</a></li>
+        <li><a href="#en-ffmpeg">Install FFmpeg (.srt conversion)</a></li>
+        <li><a href="#en-traduir">Translate the subtitles</a></li>
+        <li><a href="#en-revisar">Review the translation</a></li>
+        <li><a href="#en-projectar">Play the video with subtitles</a></li>
+        <li><a href="#en-drets">Copyright and educational use</a></li>
+        <li><a href="#en-resum">Quick summary</a></li>
+      </ol>
+    </div>
+
+    <section id="en-panorama">
+      <h2><span class="num">1</span>Process overview</h2>
+      <p>The idea is simple: <strong>we do not download the video</strong>. We only extract the subtitle file, translate it into Catalan or Spanish, review it, and overlay it on the browser player when we project the video.</p>
+      <ol>
+        <li>Check which subtitles the video page offers.</li>
+        <li>Download the subtitle file in the original language.</li>
+        <li>Convert it to <code>.srt</code> (the most compatible format).</li>
+        <li>Translate it into the target language.</li>
+        <li>Review the most obvious errors.</li>
+        <li>Load it over the web player using a browser extension.</li>
+      </ol>
+      <div class="nota">
+        <strong>Why not download the video?</strong>
+        Because the video keeps playing from the original page (respecting the site's terms), and we only add a text layer on top. It is lighter, more legal and simpler.
+      </div>
+    </section>
+
+    <section id="en-requisits">
+      <h2><span class="num">2</span>What you need</h2>
+      <ul>
+        <li><strong>Windows 11</strong> (or any system with a terminal).</li>
+        <li><strong>yt-dlp</strong>: a command-line tool to extract subtitles.</li>
+        <li><strong>FFmpeg</strong>: to convert subtitles to <code>.srt</code>.</li>
+        <li><strong>A browser</strong> (Chrome, Edge, Firefox) with an overlay subtitles extension.</li>
+        <li><strong>A subtitle translator</strong> (online or manual).</li>
+      </ul>
+    </section>
+
+    <section id="en-subtitols">
+      <h2><span class="num">3</span>Download the original subtitles</h2>
+
+      <h3>3.1 Install yt-dlp</h3>
+      <p>The easiest option on Windows 11 is to use <code>winget</code>, which installs everything in the right place:</p>
+      <pre><code>winget install yt-dlp</code></pre>
+      <p>If you prefer not to install anything, download <code>yt-dlp.exe</code> from the GitHub releases page and save it in a known folder (for example, <code>Downloads</code>).</p>
+
+      <h3>3.2 See which subtitles are available</h3>
+      <p>Replace the link with the one for the video you are interested in:</p>
+      <pre><code>yt-dlp --list-subs "VIDEO_URL"</code></pre>
+      <p>You will get a list like this:</p>
+      <pre><code>Language  Formats
+fr-forced vtt
+de-acc    vtt</code></pre>
+      <div class="nota">
+        <strong>Tip</strong>
+        Labels may be <code>fr</code>, <code>fr-forced</code>, <code>de-acc</code>, etc. If a label has a suffix (<code>-forced</code>, <code>-acc</code>), you must write it in full or use a wildcard (<code>"fr.*"</code>).
+      </div>
+
+      <h3>3.3 Download the chosen subtitle</h3>
+      <p>Change <code>fr-forced</code> to the label you have chosen:</p>
+      <pre><code>yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "VIDEO_URL"</code></pre>
+      <table>
+        <tr><th>Option</th><th>What it does</th></tr>
+        <tr><td><code>--write-subs</code></td><td>Downloads the subtitles</td></tr>
+        <tr><td><code>--sub-langs "xx"</code></td><td>Selects the language (a wildcard works: <code>"fr.*"</code>)</td></tr>
+        <tr><td><code>--convert-subs srt</code></td><td>Converts to <code>.srt</code></td></tr>
+        <tr><td><code>--skip-download</code></td><td>Does not download the video, only the subtitles</td></tr>
+      </table>
+      <div class="avis">
+        <strong>Watch out for "forced" subtitles</strong>
+        A <code>-forced</code> subtitle sometimes only contains the translated parts (for example, when someone speaks another language) and not the whole dialogue. If the resulting file has very few lines, try another label (for example, <code>de-acc</code>, which is usually complete).
+      </div>
+    </section>
+
+    <section id="en-ffmpeg">
+      <h2><span class="num">4</span>Install FFmpeg (.srt conversion)</h2>
+      <p>If you see an error like <code>ffmpeg not found</code> when running the previous command, this tool is missing. Install it with:</p>
+      <pre><code>winget install Gyan.FFmpeg</code></pre>
+      <p>Then <strong>close and reopen the terminal</strong> so that the environment variables are reloaded. Check it with:</p>
+      <pre><code>ffmpeg -version</code></pre>
+      <p>If the version information appears, you can run the download command from step 3.3 again.</p>
+      <div class="nota">
+        <strong>Alternative without FFmpeg</strong>
+        The <code>.vtt</code> file downloaded before conversion also contains the text. You can open it with a text editor, but <code>.srt</code> is more universal for translating and loading afterwards.
+      </div>
+    </section>
+
+    <section id="en-traduir">
+      <h2><span class="num">5</span>Translate the subtitles</h2>
+      <p>You now have an <code>.srt</code> file in the original language. Now it needs to be translated.</p>
+
+      <h3>Option A: Online tool (the fastest)</h3>
+      <ol>
+        <li>Go to a subtitle translation service (for example, TranslateSubtitles.co or similar).</li>
+        <li>Upload the <code>.srt</code> file.</li>
+        <li>Choose the source and target languages (Catalan or Spanish).</li>
+        <li>Download the translated file.</li>
+      </ol>
+
+      <h3>Option B: Assisted manual translation</h3>
+      <p>Open the <code>.srt</code> with a text editor and translate it line by line, using a translator such as DeepL. It is slower, but gives you more control over the result.</p>
+
+      <div class="nota">
+        <strong>Quality tip</strong>
+        The closer the source and target languages (for example, French → Spanish), the more reliable machine translation tends to be. German → Spanish also works well, but deserves a closer review.
+      </div>
+    </section>
+
+    <section id="en-revisar">
+      <h2><span class="num">6</span>Review the translation</h2>
+      <p>Machine translation is a good starting point, but before projecting it you should do a quick review. Pay particular attention to:</p>
+      <ul>
+        <li><strong>Proper nouns and titles</strong> of works, games, people or places (they should not be translated).</li>
+        <li><strong>Technical or cultural terms</strong> the translator may have misinterpreted.</li>
+        <li><strong>Gender and number agreement</strong> (for example, "autora" when the original is a man).</li>
+        <li><strong>Broken sentences</strong> or strange constructions that make comprehension difficult.</li>
+        <li><strong>Timing</strong>: check that the timecodes reach the end of the video.</li>
+      </ul>
+      <div class="avis">
+        <strong>Check the coverage</strong>
+        Open the file and see how many lines it has and up to which minute it reaches. A 30-minute video with a complete subtitle usually has hundreds of lines. If it has very few, you may have picked a partial subtitle.
+      </div>
+    </section>
+
+    <section id="en-projectar">
+      <h2><span class="num">7</span>Play the video with subtitles</h2>
+      <p>This is the part that makes downloading the video unnecessary: we overlay our <code>.srt</code> on the web player.</p>
+
+      <h3>With a browser extension</h3>
+      <ol>
+        <li>Install an overlay subtitles extension (for example, <em>Subtitle Overlay</em> or similar) from your browser's store.</li>
+        <li>Open the original video page.</li>
+        <li>Click the extension icon and choose <strong>Load file</strong>.</li>
+        <li>Select your translated <code>.srt</code>.</li>
+        <li>If needed, adjust the time offset (+1 s, −0.5 s…) until the subtitles match the voice.</li>
+      </ol>
+
+      <div class="nota">
+        <strong>Why not inject code into the page?</strong>
+        Modern web players are usually closed (HLS, protections, etc.) and do not allow you to add a <code>&lt;track&gt;</code> tag manually. Overlay subtitle extensions work precisely because they draw the text on top, without touching the player.
+      </div>
+    </section>
+
+    <section id="en-drets">
+      <h2><span class="num">8</span>Copyright and educational use</h2>
+      <p>In Spain (including Catalonia), intellectual property law allows the use of <strong>fragments</strong> of works to illustrate teaching activity in formal education, provided these conditions are met:</p>
+      <ul>
+        <li>It is for <strong>teaching purposes</strong>, not commercial.</li>
+        <li>It is a <strong>fragment</strong> (the necessary part), not the whole work.</li>
+        <li>The work is already <strong>published</strong>.</li>
+        <li>The <strong>author and source are cited</strong> (for example, the programme name and the original link).</li>
+      </ul>
+      <div class="avis">
+        <strong>Practical recommendation</strong>
+        For in-person classroom use, projecting the original video with your subtitles and citing the source is the safest route. If you want to post the fragment on the school platform, discuss it with the school: the most cautious approach is to link to the original video rather than posting it.
+      </div>
+    </section>
+
+    <section id="en-resum">
+      <h2><span class="num">9</span>Quick summary</h2>
+      <pre><code># 1. List available subtitles
+yt-dlp --list-subs "URL"
+
+# 2. Download one (example: fr-forced)
+yt-dlp --write-subs --sub-langs "fr-forced" --convert-subs srt --skip-download "URL"
+
+# 3. If FFmpeg is missing
+winget install Gyan.FFmpeg
+
+# 4. Translate the .srt with an online tool or manually
+
+# 5. Load the translated .srt over the web player with an overlay subtitles extension</code></pre>
+      <p>With these five steps you can project any web video with subtitles in the language you need, without downloading it.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <span id="peu">Guia compartible · Elaborada a partir d'un procés real de preparació de material docent</span>
+</footer>
+
+<script>
+  const textos = {
+    ca: {
+      titol: "Guia: subtítols traduïts per a vídeos web",
+      subtitol: "Guia pràctica per a ús docent o personal · Windows 11",
+      peu: "Guia compartible · Elaborada a partir d'un procés real de preparació de material docent"
+    },
+    es: {
+      titol: "Guía: subtítulos traducidos para vídeos web",
+      subtitol: "Guía práctica para uso docente o personal · Windows 11",
+      peu: "Guía compartible · Elaborada a partir de un proceso real de preparación de material docente"
+    },
+    en: {
+      titol: "Guide: translated subtitles for web videos",
+      subtitol: "Practical guide for teaching or personal use · Windows 11",
+      peu: "Shareable guide · Based on a real process of preparing teaching materials"
+    }
+  };
+
+  const boto = document.querySelectorAll('.selector button');
+  const blocs = document.querySelectorAll('.idioma');
+
+  function canviaIdioma(idioma){
+    blocs.forEach(b => b.classList.remove('actiu'));
+    document.getElementById(idioma).classList.add('actiu');
+    boto.forEach(b => b.classList.toggle('actiu', b.dataset.idioma === idioma));
+    document.getElementById('titol').textContent = textos[idioma].titol;
+    document.getElementById('subtitol').textContent = textos[idioma].subtitol;
+    document.getElementById('peu').textContent = textos[idioma].peu;
+    document.documentElement.lang = idioma;
+  }
+
+  boto.forEach(b => {
+    b.addEventListener('click', () => canviaIdioma(b.dataset.idioma));
+  });
+</script>
+
+</body>
+</html>
